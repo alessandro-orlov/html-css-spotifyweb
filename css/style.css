@@ -1,0 +1,63 @@
+/*=======*/
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* #141922; */
+/*===============*/
+/* GENERAL RULES */
+.ms_wrapper {
+  height: calc(100vh - 100px);
+  color: #ccc;
+}
+
+.ms_wrapper::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* NAVIGATION */
+.ms_navigation-menu {
+  float: left;
+  width: 300px;
+  min-width: 300px;
+  height: calc(100vh - 100px);
+  background-color: red;
+}
+
+/*======*/
+/* MAIN */
+.ms_main-content {
+  float: left;
+  width: calc(100% - 300px);
+  height: calc(100vh - 100px);
+  background-color: blue;
+  overflow-y: auto;
+}
+
+.top-panel {
+  background-color: #0000004d;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 300px);
+}
+
+.new {
+  padding: 50px;
+}
+
+/*========*/
+/* FOOTER */
+
+.ms_player {
+  width: 100%;
+  height: 100px;
+  background-color: green;
+}
