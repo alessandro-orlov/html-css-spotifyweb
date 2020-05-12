@@ -11,7 +11,7 @@
 /*===============*/
 /* GENERAL RULES */
 .ms_wrapper {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 90px);
   color: #ccc;
 }
 
@@ -24,19 +24,20 @@
 /* NAVIGATION */
 .ms_navigation-menu {
   float: left;
-  width: 300px;
-  min-width: 300px;
-  height: calc(100vh - 100px);
-  background-color: red;
+  width: 250px;
+  min-width: 250px;
+  height: calc(100vh - 90px);
+  background-color: #000;
 }
 
 /*======*/
 /* MAIN */
 .ms_main-content {
   float: left;
-  width: calc(100% - 300px);
-  height: calc(100vh - 100px);
-  background-color: blue;
+  width: calc(100% - 250px);
+  height: calc(100vh - 90px);
+  background-color: #2e4061;
+  padding-top: 100px;
   overflow-y: auto;
 }
 
@@ -46,7 +47,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: calc(100% - 300px);
+  width: calc(100% - 250px);
 }
 
 .new {
@@ -58,6 +59,6 @@
 
 .ms_player {
   width: 100%;
-  height: 100px;
-  background-color: green;
+  height: 90px;
+  background-color: #282828;
 }
