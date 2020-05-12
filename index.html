@@ -5,55 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Complete recreation of Spotify layout - made by Alexander Orlov">
     <link rel="icon" href="img/favicon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Spotify layout by Alexander Orlov</title>
   </head>
   <body>
     <div class="ms_wrapper">
-      <nav>
-        <div class="ms_navigation-menu">
-          <div class="logo">
-            <img src="img/logo.svg" alt="Spotify logo">
+
+      <!-- Begin sidebar -->
+      <div class="ms_sidebar">
+        <div class="logo">
+          <img class="big" src="img/logo.svg" alt="Spotify logo">
+          <img class="small" src="img/logo-small.svg" alt="Spotify logo">
+        </div>
+
+        <!-- Begin main navigation -->
+        <nav class="main-navigation">
+          <ul>
+            <li class="active">
+              <a href="#">
+                <img src="img/home.svg" alt="home">
+                <span class="main-nav-text">Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/search.svg" alt="cerca">
+                <span class="main-nav-text">Cerca</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/libreria.svg" alt="home">
+                <span class="main-nav-text">La tua libreria</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- End main navigation -->
+
+        <!-- Begin Playlist -->
+        <div class="playlist">
+          <h3>PLAYLIST</h3>
+          <div class="add-list-item">
+            <a href="#">
+              <span class="ms_plus"><i class="fas fa-plus"></i></span>
+              <span class="main-nav-text">Crea playlist</span>
+            </a>
           </div>
-          <div class="main-navigation">
+          <div class="ms_list-item">
             <ul>
-              <li class="active">
-                <a href="#">
-                  <img src="img/home.svg" alt="home">
-                  <span class="main-nav-text">Home</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/search.svg" alt="cerca">
-                  <span class="main-nav-text">Cerca</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/libreria.svg" alt="home">
-                  <span class="main-nav-text">La tua libreria</span>
-                </a>
-              </li>
+              <li><a href="">Nome playlist</a></li>
+              <li><a href="">Nome playlist</a></li>
+              <li><a href="">Nome playlist</a></li>
+              <li><a href="">Nome playlist</a></li>
+              <li><a href="">Nome playlist</a></li>
+              <li><a href="">Nome playlist</a></li>
+              <li><a href="">Nome playlist</a></li>
             </ul>
           </div>
+
         </div>
-      </nav>
+        <!-- End Playlist -->
+
+      </div>
+      <!-- End sidebar -->
+
       <main>
         <div class="ms_main-content">
           <div class="top-panel">
             <a href="#" class="ms_upgrade-btn">effettua l'upgrade</a>
           </div>
-
         </div>
       </main>
+
     </div>
+    <!-- End wrapper -->
 
     <footer>
       <div class="ms_player">
 
       </div>
     </footer>
+
+
   </body>
 </html>
