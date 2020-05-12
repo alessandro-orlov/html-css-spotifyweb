@@ -1,15 +1,18 @@
 /*=======*/
 /* Reset */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* #141922; */
 /*===============*/
 /* GENERAL RULES */
+body {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
 .ms_wrapper {
   height: calc(100vh - 90px);
   color: #ccc;
@@ -21,6 +24,15 @@
   clear: both;
 }
 
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+ul {
+  list-style-type: none;
+}
+
 /* NAVIGATION */
 .ms_navigation-menu {
   float: left;
@@ -28,6 +40,26 @@
   min-width: 250px;
   height: calc(100vh - 90px);
   background-color: #000;
+}
+.logo {
+  padding: 20px;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.main-navigation li {
+  padding: 10px 20px;
+}
+
+.main-navigation li.active {
+  border-left: 4px solid #fff;
+}
+
+.main-navigation img {
+  height: 30px;
+  vertical-align: middle;
 }
 
 /*======*/
@@ -42,21 +74,29 @@
 }
 
 .top-panel {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   background-color: #0000004d;
-  height: 100px;
+  height: 90px;
   position: absolute;
   top: 0;
   right: 0;
   width: calc(100% - 250px);
 }
 
-.new {
-  padding: 50px;
+.ms_upgrade-btn {
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  border-radius: 25px;
+  margin: 0 25px;
+  background-color: #0000004d;
+  font-size: 0.8em;
 }
 
 /*========*/
 /* FOOTER */
-
 .ms_player {
   width: 100%;
   height: 90px;
