@@ -18,11 +18,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-.ms_wrapper {
-  height: 100vh;
-  color: #ccc;
-  min-width: 500px;
-}
 main {
   height: calc(100vh - 90px);
 }
@@ -31,6 +26,10 @@ main::after {
   content: '';
   display: table;
   clear: both;
+}
+
+section {
+  margin-bottom: 50px;
 }
 
 a {
@@ -45,6 +44,16 @@ a:hover {
 
 ul {
   list-style-type: none;
+}
+
+.ms_wrapper {
+  height: 100vh;
+  color: #ccc;
+  min-width: 500px;
+}
+
+.ms_rounded {
+  border-radius: 50%;
 }
 
 /*=========*/
@@ -170,12 +179,13 @@ ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: #0000004d;
+  background-color: #00000091;
   height: 90px;
   position: fixed;
   top: 0;
   right: 0;
   width: calc(100% - 50px);
+  z-index: 100;
 }
 
 .ms_upgrade-btn {
@@ -184,10 +194,15 @@ ul {
   color: #fff;
   text-transform: uppercase;
   border-radius: 25px;
-  margin: 0 25px;
+  margin: 0 40px;
   background-color: #0000004d;
   font-size: 0.8em;
   text-align: center;
+  transition: .3s ease-in-out;
+}
+
+.ms_upgrade-btn:hover {
+  transform: scale(1.05);
 }
 
 /* main content box */
@@ -233,16 +248,27 @@ ul {
 }
 
 /* thumbnail wrap */
-.ms_recently-played ul {
+.ms_section-intro {
+  margin-bottom: 20px;
+}
+
+.ms_section-intro h2 {
+  margin-bottom: 5px;
+}
+
+#recently-played ul,
+#created-for-user ul,
+#popular-artists ul {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  margin-left: -10px;
 }
 
 li.ms_thumbnail-wrap {
   flex-basis: calc(50% - 10px);
   text-align: center;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 li.ms_thumbnail-wrap img {
@@ -279,8 +305,7 @@ li.ms_thumbnail-wrap img {
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
-  transition: opacity .15s ease-out;
-  transition-duration: 0s;
+  transition: opacity .1s ease-out .1s;
 }
 
 .ms_thumbnail-wrap:hover .ms_thumbnail-overlay  {
