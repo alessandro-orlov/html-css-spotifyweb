@@ -15,6 +15,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
+  color: #fff;
 }
 
 .ms_wrapper {
@@ -37,6 +38,11 @@ a {
   text-decoration: none;
   font-weight: 600;
 }
+
+a:hover {
+  color: #fff;
+}
+
 ul {
   list-style-type: none;
 }
@@ -189,7 +195,7 @@ ul {
   padding: 100px 20px 20px;
 }
 
-.ms_content-box ul {
+.ms_content-box ul.ms_content-navigation {
   height: 100px;
   display: flex;
   flex-direction: row;
@@ -198,17 +204,17 @@ ul {
   align-content: space-between;
 }
 
-.ms_content-box li {
+.ms_content-navigation>li {
   margin-right: 10px;
   position: relative;
 }
 
-.ms_content-box li:last-child {
+.ms_content-navigation>li:last-child {
   margin-right: 0;
 }
 
-.ms_content-box span.ms_active,
- .ms_content-box li:hover span:first-child {
+.ms_content-navigation span.ms_active,
+.ms_content-navigation li:hover span:first-child {
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -225,6 +231,67 @@ ul {
   text-transform: uppercase;
   padding: 10px;
 }
+
+/* thumbnail wrap */
+.ms_recently-played ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+li.ms_thumbnail-wrap {
+  flex-basis: calc(50% - 10px);
+  text-align: center;
+  cursor: pointer;
+}
+
+li.ms_thumbnail-wrap img {
+  width: 100%;
+}
+
+.ms_thumbnail-wrap .ms_title {
+  font-size: 1.3em;
+}
+
+.ms_thumbnail-wrap .ms_subtitle {
+  font-size: 1.1em;
+}
+
+.ms_thumbnail-image {
+  position: relative;
+}
+
+.ms_thumbnail-image  .ms_thumbnail-overlay {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  background-color: #000000a8;
+  transition: all .3s ease;
+}
+
+.ms_thumbnail-image  .ms_thumbnail-overlay i {
+  opacity: 0%;
+  color: #fff;
+  font-size: 4em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  transition: opacity .15s ease-out;
+  transition-duration: 0s;
+}
+
+.ms_thumbnail-wrap:hover .ms_thumbnail-overlay  {
+  height: 100%;
+}
+
+.ms_thumbnail-wrap:hover  .ms_thumbnail-overlay i {
+  display: block;
+  opacity: 100%;
+}
+
 
 /*========*/
 /* FOOTER */
@@ -400,11 +467,16 @@ ul {
 
 /* MD */
 @media screen and (min-width: 992px) {
-
+  li.ms_thumbnail-wrap {
+    flex-basis: calc((100% / 4) - 10px );
+  }
 }
 
 
 /* LG */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
+   li.ms_thumbnail-wrap {
+    flex-basis: calc((100% / 6) - 10px );
+  }
 
 }
