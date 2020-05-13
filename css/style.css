@@ -49,7 +49,7 @@ ul {
 .ms_wrapper {
   height: 100vh;
   color: #ccc;
-  min-width: 500px;
+  min-width: 450px;
 }
 
 .ms_rounded {
@@ -317,7 +317,6 @@ li.ms_thumbnail-wrap img {
   opacity: 100%;
 }
 
-
 /*========*/
 /* FOOTER */
 .ms_player {
@@ -335,9 +334,9 @@ li.ms_thumbnail-wrap img {
   align-self: center;
 }
 
-.ms_player .names,
-.ms_player .favorites,
-.ms_player img {
+.album .names,
+.album .ms_somthing,
+.album img {
   display: inline-block;
   vertical-align: middle;
 }
@@ -352,14 +351,19 @@ li.ms_thumbnail-wrap img {
   width: 50px;
   margin-right: 5px;
 }
+.album .album-title,
+.album .song-title,
+.album .favorites {
+  line-height: 15px; 
+}
 
-.album .song-name {
+.album .song-title {
   font-size: 0.8em;
   color:#717171;
 }
 
 .album .favorites i {
-  margin-left: 10px;
+  margin-left: 5px;
   color:#717171;
   font-size: 1.1em;
 }
@@ -382,7 +386,6 @@ li.ms_thumbnail-wrap img {
 }
 
 .player-controls {
-  /* width: 100%; */
   flex-grow: 2;
   min-width: 200px;
 }
@@ -412,7 +415,7 @@ li.ms_thumbnail-wrap img {
 .volume-controls {
   flex-basis: 25%;
   text-align: right;
-  min-width: 150px;
+  min-width: 100px;
 }
 
 .volume-controls i {
@@ -422,14 +425,18 @@ li.ms_thumbnail-wrap img {
 
 .volume-controls .volume-bar {
   vertical-align: middle;
-  width: 30%;
+  width: 50%;
   min-width: 10%;
   height: 4px;
   border-radius: 4px;
   background-color: #717171;
 }
 
-
+.volume-controls .top-volume-controls,
+.volume-controls .bottom-volume-controls {
+  display: block;
+  line-height: 15px;
+}
 /*============*/
 /* MEDIA QUERY*/
 /* XS */
@@ -487,7 +494,14 @@ li.ms_thumbnail-wrap img {
 
 /* SM */
 @media screen and (min-width: 768px) {
+  .album .favorites {
+    display: inline-block;
+  }
 
+  .volume-controls .top-volume-controls,
+  .volume-controls .bottom-volume-controls {
+    display: inline;
+  }
 }
 
 /* MD */
