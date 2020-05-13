@@ -36,9 +36,14 @@ a {
   color: #717171;
   text-decoration: none;
   font-weight: 600;
+  transition: .3s;
 }
 
 a:hover {
+  color: #fff;
+}
+
+a.ms_active-link {
   color: #fff;
 }
 
@@ -86,16 +91,11 @@ ul {
 
 .ms_main-navigation li.ms_active {
   border-left: 5px solid #adff2f;
-  color: #fff;
 }
 
 .ms_main-navigation img {
   height: 25px;
   vertical-align: middle;
-}
-
-.ms_main-navigation a {
-  color: inherit;
 }
 
 .ms_main-nav-text {
@@ -108,12 +108,21 @@ ul {
   padding: 15px;
 }
 
+.ms_add-list-item a {
+  display: block;
+}
+
+.ms_add-list-item a:hover .ms_plus {
+  background-color: #fff;
+}
+
 .ms_add-list-item .ms_plus {
   display: inline-block;
   color: #000;
-  background-color: #ccc;
+  background-color: #717171;
   padding: 10px 12px;
   font-size: 1.5em;
+  transition: .3s;
 }
 
 .ms_add-list-item {
@@ -148,7 +157,7 @@ ul {
 }
 
 .ms_user .ms_profile-avatar {
-  background-color: #ccc;
+  background-color: #717171;
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -268,7 +277,7 @@ li.ms_thumbnail-wrap {
   flex-basis: calc(50% - 10px);
   text-align: center;
   cursor: pointer;
-  margin-left: 10px;
+  margin: 0 0 30px 10px;
 }
 
 li.ms_thumbnail-wrap img {
@@ -354,7 +363,7 @@ li.ms_thumbnail-wrap img {
 .album .album-title,
 .album .song-title,
 .album .favorites {
-  line-height: 15px; 
+  line-height: 15px;
 }
 
 .album .song-title {
@@ -362,9 +371,12 @@ li.ms_thumbnail-wrap img {
   color:#717171;
 }
 
+.album .song-title a:hover {
+  text-decoration: underline;
+}
+
 .album .favorites i {
   margin-left: 5px;
-  color:#717171;
   font-size: 1.1em;
 }
 
@@ -378,11 +390,16 @@ li.ms_thumbnail-wrap img {
   margin: 0 5px;
   font-size: 1.1em;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .player-buttons i.fa-play-circle {
   font-size: 1.8em;
   margin: 0 10px;
+}
+
+.player-buttons i.fa-play-circle:hover {
+  transform: scale(1.2);
 }
 
 .player-controls {
@@ -391,19 +408,57 @@ li.ms_thumbnail-wrap img {
 }
 
 .song-time-bar .current-time,
-.song-time-bar .song-bar,
+.song-time-bar .control-bar-mixed,
+.ms_player .whole-bar,
+.ms_player .active-part-bar,
+.ms_player .control-bar-circle
 .song-time-bar .end-time,
 .volume-controls .volume-bar {
   display: inline-block;
-
 }
 
-.song-time-bar .song-bar {
-  vertical-align: middle;
+.ms_player .control-bar-mixed {
+  position: relative;
   width: 55%;
+}
+
+.ms_player .whole-bar,
+.ms_player .active-part-bar {
+  vertical-align: middle;
+  width: 100%;
   height: 4px;
   border-radius: 4px;
   background-color: #717171;
+  cursor: pointer;
+}
+
+.ms_player .active-part-bar {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 22%;
+  background-color: #fff;
+
+}
+
+.control-bar-mixed .control-bar-circle {
+  display: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 22%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+ .control-bar-mixed:hover .active-part-bar {
+  background-color: #adff2f;
+}
+
+.control-bar-mixed:hover .control-bar-circle {
+  display: inline-block;
 }
 
 .song-time-bar [class*="time"] {
@@ -437,6 +492,15 @@ li.ms_thumbnail-wrap img {
   display: block;
   line-height: 15px;
 }
+
+.bottom-volume-controls .control-bar-mixed {
+  width: 50%;
+}
+
+.bottom-volume-controls .whole-bar {
+  width: 50%;
+}
+
 /*============*/
 /* MEDIA QUERY*/
 /* XS */

@@ -29,7 +29,7 @@
             <div class="ms_main-navigation">
               <ul>
                 <li class="ms_active">
-                  <a href="#">
+                  <a href="#" class="ms_active-link">
                     <img src="img/home.svg" alt="home">
                     <span class="ms_main-nav-text">Home</span>
                   </a>
@@ -105,23 +105,28 @@
               <ul class="ms_content-navigation">
                 <li>
                   <span class="ms_active"></span>
-                  <span><a href="">in evidenza</a></span>
+                  <span><a href="" class="ms_active-link">in evidenza</a></span>
                 </li>
                 <li>
                   <span></span>
-                  <span><a href="">podcast</a></li></span>
+                  <span><a href="">podcast</a></span>
+                </li>
                 <li>
                   <span></span>
-                  <span><a href="">classifiche</a></li></span>
+                  <span><a href="">classifiche</a></span>
+                </li>
                 <li>
                   <span></span>
-                  <span><a href="">generi e mood</a></li></span>
+                  <span><a href="">generi e mood</a></span>
+                </li>
                 <li>
                   <span></span>
-                  <span><a href="">nuove uscite</a></li></span>
+                  <span><a href="">nuove uscite</a></span>
+                </li>
                 <li>
                   <span></span>
-                  <span><a href="">scopri</a></li></span>
+                  <span><a href="">scopri</a></span>
+                </li>
               </ul>
             </nav>
 
@@ -272,12 +277,18 @@
                   Sinister
                 </div>
                 <div class="song-title">
-                  Brano Nome
+                  <a href="#">
+                    Brano Nome
+                  </a>
                 </div>
               </div>
               <div class="favorites">
-                <i class="far fa-heart"></i>
-                <i class="far fa-folder"></i>
+                <a href="#">
+                  <i class="far fa-heart"></i>
+                </a>
+                <a href="#">
+                  <i class="far fa-folder"></i>
+                </a>
               </div>
             </div>
 
@@ -291,8 +302,12 @@
               <i class="fas fa-redo-alt"></i>
             </div>
             <div class="song-time-bar">
-              <span class="current-time">0:25</span>
-              <span class="song-bar"></span>
+              <span class="current-time">1:05</span>
+              <span class="control-bar-mixed">
+                <span class="whole-bar"></span>
+                <span class="active-part-bar"></span>
+                <span class="control-bar-circle"></span>
+              </span>
               <span class="end-time">4:25</span>
             </div>
           </div>
@@ -301,10 +316,16 @@
               <i class="fas fa-sliders-h"></i>
               <i class="fas fa-tv"></i>
             </div>
+
             <div class="bottom-volume-controls">
               <i class="fas fa-volume-up"></i>
-              <span class="volume-bar"></span>
+              <span class="control-bar-mixed">
+                <span class="whole-bar"></span>
+                <span class="active-part-bar"></span>
+                <span class="control-bar-circle"></span>
+              </span>
             </div>
+
           </div>
         </div>
       </footer>
