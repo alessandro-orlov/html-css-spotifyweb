@@ -33,9 +33,9 @@ main::after {
 }
 
 a {
-  color: #fff;
+  color: #717171;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 ul {
   list-style-type: none;
@@ -49,10 +49,6 @@ ul {
   height: 100%;
   background-color: #000;
   overflow: hidden;
-}
-
-.ms_sidebar a {
-  color:#717171;
 }
 
 .ms_sidebar-top {
@@ -154,8 +150,8 @@ ul {
   color: #fff;
 }
 
-/*======*/
-/* MAIN */
+/*==============*/
+/* MAIN CONTENT */
 .ms_main-content {
   float: left;
   width: calc(100% - 50px);
@@ -179,12 +175,55 @@ ul {
 .ms_upgrade-btn {
   padding: 10px 20px;
   border: 1px solid #fff;
+  color: #fff;
   text-transform: uppercase;
   border-radius: 25px;
   margin: 0 25px;
   background-color: #0000004d;
   font-size: 0.8em;
   text-align: center;
+}
+
+/* main content box */
+.ms_content-box {
+  padding: 100px 20px 20px;
+}
+
+.ms_content-box ul {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.ms_content-box li {
+  margin-right: 10px;
+  position: relative;
+}
+
+.ms_content-box li:last-child {
+  margin-right: 0;
+}
+
+.ms_content-box span.ms_active,
+ .ms_content-box li:hover span:first-child {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35%;
+  height: 4px;
+  background-color: #adff2f;
+  transition: background-color .4s ease;
+}
+
+.ms_content-box a {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 10px;
 }
 
 /*========*/
