@@ -12,65 +12,85 @@
   </head>
   <body>
     <div class="ms_wrapper">
-
-      <!-- Begin sidebar -->
+      <!-- Begin Sidebar -->
       <div class="ms_sidebar">
-        <div class="logo">
-          <img class="big" src="img/logo.svg" alt="Spotify logo">
-          <img class="small" src="img/logo-small.svg" alt="Spotify logo">
+
+        <!-- Begin sidebar-top -->
+        <div class="ms_sidebar-top">
+          <div class="logo">
+            <img class="big" src="img/logo.svg" alt="Spotify logo">
+            <img class="small" src="img/logo-small.svg" alt="Spotify logo">
+          </div>
+
+          <!-- Begin main navigation -->
+          <nav class="main-navigation">
+            <ul>
+              <li class="active">
+                <a href="#">
+                  <img src="img/home.svg" alt="home">
+                  <span class="main-nav-text">Home</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/search.svg" alt="cerca">
+                  <span class="main-nav-text">Cerca</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/libreria.svg" alt="home">
+                  <span class="main-nav-text">La tua libreria</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- End main navigation -->
+
+          <!-- Begin Playlist -->
+          <div class="playlist">
+            <h3>PLAYLIST</h3>
+            <div class="add-list-item">
+              <a href="#">
+                <span class="ms_plus"><i class="fas fa-plus"></i></span>
+                <span class="main-nav-text">Crea playlist</span>
+              </a>
+            </div>
+            <div class="ms_list-item">
+              <ul>
+                <li><a href="">Nome playlist 1</a></li>
+                <li><a href="">Nome playlist 2</a></li>
+                <li><a href="">Nome playlist 3</a></li>
+                <li><a href="">Nome playlist 4</a></li>
+                <li><a href="">Nome playlist 5</a></li>
+                <li><a href="">Nome playlist 6</a></li>
+                <li><a href="">Nome playlist 7</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Playlist -->
         </div>
+        <!-- End sidebar-top -->
 
-        <!-- Begin main navigation -->
-        <nav class="main-navigation">
-          <ul>
-            <li class="active">
-              <a href="#">
-                <img src="img/home.svg" alt="home">
-                <span class="main-nav-text">Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="img/search.svg" alt="cerca">
-                <span class="main-nav-text">Cerca</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="img/libreria.svg" alt="home">
-                <span class="main-nav-text">La tua libreria</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- End main navigation -->
-
-        <!-- Begin Playlist -->
-        <div class="playlist">
-          <h3>PLAYLIST</h3>
-          <div class="add-list-item">
+        <!-- Begin sidebar bottom  -->
+        <div class="ms_sidebar-bottom">
+          <div class="ms_install-app">
             <a href="#">
-              <span class="ms_plus"><i class="fas fa-plus"></i></span>
-              <span class="main-nav-text">Crea playlist</span>
+            <img src="img/download.svg" alt="download app">
+            <span class="main-nav-text">Install app</span>
             </a>
           </div>
-          <div class="ms_list-item">
-            <ul>
-              <li><a href="">Nome playlist</a></li>
-              <li><a href="">Nome playlist</a></li>
-              <li><a href="">Nome playlist</a></li>
-              <li><a href="">Nome playlist</a></li>
-              <li><a href="">Nome playlist</a></li>
-              <li><a href="">Nome playlist</a></li>
-              <li><a href="">Nome playlist</a></li>
-            </ul>
+          <div class="ms_user">
+            <a href="#">
+            <span class="profile-avatar">&nbsp;</span>
+            <p class="main-nav-text user-name">Alexander Orlov</p>
+            </a>
           </div>
-
         </div>
-        <!-- End Playlist -->
+        <!-- Begin sidebar bottom  -->
 
       </div>
-      <!-- End sidebar -->
+      <!-- End Sidebar -->
 
       <main>
         <div class="ms_main-content">
@@ -86,9 +106,46 @@
     <footer>
       <div class="ms_player">
 
+        <div class="album">
+          <img src="img/sinister.jpeg" alt="sinister">
+          <div class="names">
+            <div class="album-name">
+              Sinister
+            </div>
+            <div class="song-name">
+              Brano Nome
+            </div>
+          </div>
+          <div class="favorites">
+            <i class="far fa-heart"></i>
+            <i class="far fa-folder"></i>
+          </div>
+        </div>
+
+        <div class="player-controls">
+          <div class="player-buttons">
+            <i class="fas fa-random"></i>
+            <i class="fas fa-step-backward"></i>
+            <i class="far fa-play-circle"></i>
+            <i class="fas fa-step-forward"></i>
+            <i class="fas fa-redo-alt"></i>
+          </div>
+          <div class="song-time-bar">
+            <span class="current-time">0:25</span>
+            <span class="song-bar"></span>
+            <span class="end-time">4:25</span>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <i class="fas fa-sliders-h"></i>
+          <i class="fas fa-tv"></i>
+          <i class="fas fa-volume-up"></i>
+          <span class="volume-bar"></span>
+        </div>
+
       </div>
     </footer>
-
 
   </body>
 </html>
