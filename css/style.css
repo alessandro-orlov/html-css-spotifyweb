@@ -18,11 +18,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .ms_wrapper {
-  height: calc(100vh -  90px);
+  height: 100vh;
   color: #ccc;
+  min-width: 500px;
+}
+main {
+  height: calc(100vh - 90px);
 }
 
-.ms_wrapper::after {
+main::after {
   content: '';
   display: table;
   clear: both;
@@ -37,11 +41,12 @@ ul {
   list-style-type: none;
 }
 
-/* SIDEBAR NAVIGATION */
+/*=========*/
+/* SIDEBAR */
 .ms_sidebar {
   float: left;
   width: 50px;
-  height: calc(100vh - 90px);
+  height: 100%;
   background-color: #000;
   overflow: hidden;
 }
@@ -57,42 +62,42 @@ ul {
 }
 
 /* logo */
-.logo img { padding: 10px; }
-.logo img.big { display: none; }
-.logo img.small { width: 50px; }
+.ms_logo img { padding: 10px; }
+.ms_logo img.ms_big { display: none; }
+.ms_logo img.ms_small { width: 50px; }
 
 
 /* main navigation */
-.main-navigation li {
+.ms_main-navigation li {
   padding: 10px;
   border-left: 5px solid #000;
 }
 
-.main-navigation li.active {
+.ms_main-navigation li.ms_active {
   border-left: 5px solid #adff2f;
   color: #fff;
 }
 
-.main-navigation img {
+.ms_main-navigation img {
   height: 25px;
   vertical-align: middle;
 }
 
-.main-navigation a {
+.ms_main-navigation a {
   color: inherit;
 }
 
-.main-nav-text {
+.ms_main-nav-text {
   display: none;
 }
 
 /* PLaylist */
-.playlist {
+.ms_playlist {
   display: none;
   padding: 15px;
 }
 
-.add-list-item .ms_plus {
+.ms_add-list-item .ms_plus {
   display: inline-block;
   color: #000;
   background-color: #ccc;
@@ -100,7 +105,7 @@ ul {
   font-size: 1.5em;
 }
 
-.add-list-item {
+.ms_add-list-item {
   margin-bottom: 10px;
 }
 
@@ -123,7 +128,6 @@ ul {
   padding: 10px 0;
 }
 
-
 .ms_sidebar-bottom img {
   width: 25px;
   vertical-align: middle;
@@ -132,7 +136,7 @@ ul {
   line-height: 30px;
 }
 
-.ms_user .profile-avatar {
+.ms_user .ms_profile-avatar {
   background-color: #ccc;
   display: inline-block;
   width: 30px;
@@ -144,7 +148,7 @@ ul {
   background-repeat: no-repeat;
 }
 
-.ms_user .user-name {
+.ms_user .ms_user-name {
   font-size: 1.2em;
   font-weight: 600;
   color: #fff;
@@ -155,18 +159,18 @@ ul {
 .ms_main-content {
   float: left;
   width: calc(100% - 50px);
-  height: calc(100vh - 90px);
+  height: 100%;
   background-color: #19202b;
   overflow-y: auto;
 }
 
-.top-panel {
+.ms_top-panel {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   background-color: #0000004d;
   height: 90px;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: calc(100% - 50px);
@@ -192,10 +196,12 @@ ul {
   background-color: #282828;
   display: flex;
   justify-content: space-between;
+  font-size: 0.9em;
 }
 
 .ms_player > div {
-  padding: 15px;
+  padding: 15px 10px;
+  align-self: center;
 }
 
 .ms_player .names,
@@ -203,16 +209,17 @@ ul {
 .ms_player img {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 15px;
 }
 
 /* Album */
 .album {
   flex-basis: 25%;
+  min-width: 150px;
 }
 
 .album img {
   width: 50px;
+  margin-right: 5px;
 }
 
 .album .song-name {
@@ -233,19 +240,20 @@ ul {
 }
 
 .player-buttons i {
-  margin: 0 10px;
-  font-size: 1.2em;
+  margin: 0 5px;
+  font-size: 1.1em;
   vertical-align: middle;
 }
 
 .player-buttons i.fa-play-circle {
-  font-size: 2em;
-  margin: 0 15px;
+  font-size: 1.8em;
+  margin: 0 10px;
 }
 
 .player-controls {
-  width: 100%;
+  /* width: 100%; */
   flex-grow: 2;
+  min-width: 200px;
 }
 
 .song-time-bar .current-time,
@@ -258,14 +266,14 @@ ul {
 
 .song-time-bar .song-bar {
   vertical-align: middle;
-  width: 50%;
+  width: 55%;
   height: 4px;
   border-radius: 4px;
   background-color: #717171;
 }
 
 .song-time-bar [class*="time"] {
-  margin: 10px;
+  margin: 5px;
   font-size: 0.8em;
 }
 
@@ -273,7 +281,7 @@ ul {
 .volume-controls {
   flex-basis: 25%;
   text-align: right;
-  line-height: 60px;
+  min-width: 150px;
 }
 
 .volume-controls i {
@@ -299,24 +307,24 @@ ul {
     width: 230px;
   }
 
-  .main-nav-text {
+  .ms_main-nav-text {
     display: inline;
   }
 
-  .logo img {
+  .ms_logo img {
     padding: 20px;
   }
 
-  .logo img.big {
+  .ms_logo img.ms_big {
     display: inline;
     width: 150px;
   }
 
-  .logo img.small {
+  .ms_logo img.ms_small {
     display: none
   }
 
-  .playlist {
+  .ms_playlist {
     display: block;
   }
 
@@ -324,7 +332,7 @@ ul {
     width: calc(100% - 230px);
   }
 
-  .top-panel {
+  .ms_top-panel {
     width: calc(100% - 230px);
   }
 
@@ -344,13 +352,12 @@ ul {
     border-bottom: none;
   }
 
-
 }
 
 /* SM */
 @media screen and (min-width: 768px) {
 
-
+}
 
 /* MD */
 @media screen and (min-width: 992px) {
