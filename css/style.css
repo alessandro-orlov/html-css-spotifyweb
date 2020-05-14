@@ -181,16 +181,9 @@ ul {
   line-height: 30px;
 }
 
-.ms_user .ms_profile-avatar {
-  background-color: #717171;
-  display: inline-block;
+.ms_user .ms_profile-avatar img {
   width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-image: url(../img/alfa86.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  margin-right: 5px;
 }
 
 .ms_user .ms_user-name {
