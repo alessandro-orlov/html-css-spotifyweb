@@ -11,9 +11,7 @@
     <title>Spotify layout by Alexander Orlov</title>
   </head>
   <body>
-    <!-- Begin wrapper -->
     <div class="ms_wrapper">
-
       <main>
         <!-- Begin Sidebar -->
         <div class="ms_sidebar">
@@ -28,20 +26,23 @@
             <!-- Begin main navigation -->
             <div class="ms_main-navigation">
               <ul>
-                <li class="ms_active">
-                  <a href="#" class="ms_active-link">
+                <li>
+                  <a href="#">
+                    <span class="ms_active"></span>
                     <img src="img/home.svg" alt="home">
                     <span class="ms_main-nav-text">Home</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
+                    <span></span>
                     <img src="img/search.svg" alt="cerca">
                     <span class="ms_main-nav-text">Cerca</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
+                    <span></span>
                     <img src="img/libreria.svg" alt="home">
                     <span class="ms_main-nav-text">La tua libreria</span>
                   </a>
@@ -269,6 +270,8 @@
 
       <footer>
         <div class="ms_player">
+
+          <!-- album -->
           <div class="album">
             <img src="img/sinister.jpeg" alt="sinister">
             <div class="names">
@@ -291,8 +294,10 @@
                 </a>
               </div>
             </div>
-
           </div>
+          <!-- End album -->
+
+          <!-- Begin player controls -->
           <div class="player-controls">
             <div class="player-buttons">
               <i class="fas fa-random"></i>
@@ -311,12 +316,14 @@
               <span class="end-time">4:25</span>
             </div>
           </div>
+          <!-- End player controls -->
+
+          <!-- Begin volume controls -->
           <div class="volume-controls">
             <div class="top-volume-controls">
               <i class="fas fa-sliders-h"></i>
               <i class="fas fa-tv"></i>
             </div>
-
             <div class="bottom-volume-controls">
               <i class="fas fa-volume-up"></i>
               <span class="control-bar-mixed">
@@ -325,12 +332,12 @@
                 <span class="control-bar-circle"></span>
               </span>
             </div>
-
           </div>
+          <!-- End volume controls -->
+
         </div>
       </footer>
 
     </div>
-    <!-- End wrapper -->
   </body>
 </html>
