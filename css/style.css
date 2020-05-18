@@ -172,24 +172,28 @@ ul {
   padding: 10px 0;
 }
 
-.ms_sidebar-bottom img {
-  width: 25px;
-  margin-left: -5px;
+.ms_sidebar-bottom  img {
   vertical-align: middle;
 }
-.ms_user a {
-  line-height: 30px;
+
+.ms_sidebar-bottom .ms_install-app img {
+  width: 25px;
+  margin-left: -5px;
 }
 
 .ms_user .ms_profile-avatar img {
   width: 30px;
-  margin-right: 5px;
+}
+
+.ms_user a {
+  line-height: 30px;
 }
 
 .ms_user .ms_user-name {
   font-size: 1.2em;
   font-weight: 600;
   color: #fff;
+  margin-left: 5px;
 }
 /* END SIDEBAR */
 /*=============*/
