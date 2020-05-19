@@ -1,1 +1,1 @@
-document.getElementById('fsociety').innerHTML = 'Kevin Mitnick'
+document.getElementById('fsociety').innerHTML = 'Kevin Mitnick';

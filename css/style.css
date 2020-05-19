@@ -54,7 +54,7 @@ ul {
 .ms_wrapper {
   height: 100vh;
   color: #ccc;
-  min-width: 450px;
+  min-width: 360px;
 }
 
 .ms_rounded {
@@ -506,6 +506,7 @@ li.ms_thumbnail-wrap img {
 
 /* Volume controls */
 .volume-controls {
+  display: none;
   flex-basis: 25%;
   text-align: right;
   min-width: 100px;
@@ -564,6 +565,13 @@ li.ms_thumbnail-wrap img {
 }
 /*=====================*/
 /* === MEDIA QUERY === */
+
+/* ===== XXS ===== */
+@media screen and (min-width: 450px) {
+  .volume-controls {
+    display: block;
+  }
+
 
 /* ===== XS ===== */
 @media screen and (min-width: 556px) {
